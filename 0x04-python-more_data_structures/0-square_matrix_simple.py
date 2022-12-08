@@ -1,11 +1,4 @@
 #!/usr/bin/python3
 
-import random
-
-number = random.randint(-10, 10)
-if number > 0:
-    print(f"{number:d} is positive")
-elif number == 0:
-    print(f"{number:d} is zero")
-else:
-    print(f"{number:d} is negative")
+def square_matrix_simple(matrix=[]):
+        return [list(map(lambda x: x ** 2, row)) for row in matrix]
