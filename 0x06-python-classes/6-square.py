@@ -37,7 +37,7 @@ class Square:
     @property
     def position(self):
         """property of the coordinates of this Square
-	Raises:
+        Raises:
             TypeError: if value != a tuple of 2 integers < 0
         """
         return self.__position
