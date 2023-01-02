@@ -31,27 +31,7 @@ class Rectangle:
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
-            raise ValueErf.__height == 0:
-            return ("")
-        rectangle = ""
-        for column in range(self.__height):
-            for row in range(self.__width):
-                try:
-                    rectangle += str(self.print_symbol)
-                except Exception:
-                    rectangle += type(self).print_symbol
-            if column < self.__height - 1:
-                rectangle += "\n"
-        return (rectangle)
-
-    def __repr__(self):
-        """returns a string representation of the rectangle"""
-        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
-
-    def __del__(self):
-        """prints a message for every object that is deleted"""
-        print("Bye rectangle...")
-        Rectangle.number_of_instances -= 1ror("width must be >= 0")
+            raise ValueError("width must be >= 0")
         self.__width = value
 
     @property
@@ -80,4 +60,24 @@ class Rectangle:
 
     def __str__(self) -> str:
         """presents a diagram of the rectangle defined for an object"""
-        if self.__width == 0 or sel
+        if self.__width == 0 or self.__height == 0:
+            return ("")
+        rectangle = ""
+        for column in range(self.__height):
+            for row in range(self.__width):
+                try:
+                    rectangle += str(self.print_symbol)
+                except Exception:
+                    rectangle += type(self).print_symbol
+            if column < self.__height - 1:
+                rectangle += "\n"
+        return (rectangle)
+
+    def __repr__(self):
+        """returns a string representation of the rectangle"""
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+
+    def __del__(self):
+        """prints a message for every object that is deleted"""
+        print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
