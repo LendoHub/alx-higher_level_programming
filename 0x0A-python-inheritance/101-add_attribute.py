@@ -1,5 +1,3 @@
-ble File  10 lines (8 sloc)  303 Bytes
-
 #!/usr/bin/python3
 """this module defines a function that adds attributes to objects"""
 
